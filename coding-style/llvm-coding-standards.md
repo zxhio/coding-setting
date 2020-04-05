@@ -1,5 +1,7 @@
 # LLVM 编码规范
 
+**LLVM Coding Standards [官网](https://llvm.org/docs/CodingStandards.html) | 历史翻译版本 [Github](https://github.com/zxhio/coding)**
+
 - [导论](#intro)
 - [语言、库和标准](#lang)
 - [C++ 标准版本](#cppver)
