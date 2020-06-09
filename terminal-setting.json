@@ -6,129 +6,126 @@
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
-        "$schema": "https://aka.ms/terminal-profiles-schema",
-    
-        "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    
-        // You can add more global application settings here.
-        // To learn more about global settings, visit https://aka.ms/terminal-global-settings
-    
-        // If enabled, selections are automatically copied to your clipboard.
-        "copyOnSelect": false,
-    
-        // If enabled, formatted data is also copied to your clipboard
-        "copyFormatting": false,
-    
-        // A profile specifies a command to execute paired with information about how it should look and feel.
-        // Each one of them will appear in the 'New Tab' dropdown,
-        //   and can be invoked from the commandline with `wt.exe -p xxx`
-        // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
-        "profiles":
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+
+    // You can add more global application settings here.
+    // To learn more about global settings, visit https://aka.ms/terminal-global-settings
+
+    // If enabled, selections are automatically copied to your clipboard.
+    "copyOnSelect": false,
+
+    // If enabled, formatted data is also copied to your clipboard
+    "copyFormatting": false,
+
+    // A profile specifies a command to execute paired with information about how it should look and feel.
+    // Each one of them will appear in the 'New Tab' dropdown,
+    //   and can be invoked from the commandline with `wt.exe -p xxx`
+    // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
+    "profiles":
+    {
+        "defaults":
         {
-            "defaults":
-            {
-                // Put settings here that you want to apply to all profiles.
-                "cursorShape": "filledBox",
-                "fontSize": 10,
-                "theme": "light",
-                // "colorScheme": "Campbell"
-                "colorScheme": "Night Owlish Light"
-                // "antialiasingMode": "cleartype"
-            },
-            "list":
-            [
-                {
-                    // Make changes here to the powershell.exe profile.
-                    "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                    "name": "Windows PowerShell",
-                    "commandline": "powershell.exe",
-                    "hidden": false
-                },
-                {
-                    // Make changes here to the cmd.exe profile.
-                    "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                    "name": "命令提示符",
-                    "commandline": "cmd.exe",
-                    "hidden": false
-                },
-                {
-                    "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                    "hidden": false,
-                    "name": "Ubuntu-20.04",
-                    "source": "Windows.Terminal.Wsl"
-                },
-                {
-                    "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                    "hidden": false,
-                    "name": "Azure Cloud Shell",
-                    "source": "Windows.Terminal.Azure"
-                },
-                {
-                    "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                    "hidden": false,
-                    "name": "Debian",
-                    "source": "Windows.Terminal.Wsl"
-                }
-            ]
+            // Put settings here that you want to apply to all profiles.
+            "cursorShape": "filledBox",
+            "fontSize": 10,
+            "colorScheme": "BlulocoLight"
+            // "antialiasingMode": "cleartype"
         },
-    
-        // Add custom color schemes to this array.
-        // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-        "schemes": [
-            {
-                "name": "Night Owlish Light",
-                "cursorColor": "#000000",
-                "black": "#011627",
-                "red": "#d3423e",
-                "green": "#2aa298",
-                "yellow": "#daaa01",
-                "blue": "#4876d6",
-                "purple": "#403f53",
-                "cyan": "#08916a",
-                "white": "#7a8181",
-                "brightBlack": "#7a8181",
-                "brightRed": "#f76e6e",
-                "brightGreen": "#49d0c5",
-                "brightYellow": "#dac26b",
-                "brightBlue": "#5ca7e4",
-                "brightPurple": "#697098",
-                "brightCyan": "#00c990",
-                "brightWhite": "#989fb1",
-                "background": "#ffffff",
-                "foreground": "#403f53"
-              }
-        ],
-    
-        // Add custom keybindings to this array.
-        // To unbind a key combination from your defaults.json, set the command to "unbound".
-        // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
-        "keybindings":
+        "list":
         [
-            // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-            // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-            // To learn more about selection, visit https://aka.ms/terminal-selection
-            { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-            { "command": "paste", "keys": "ctrl+v" },
-    
-            // Press Ctrl+Shift+F to open the search box
-            { "command": "find", "keys": "ctrl+shift+f" },
-    
-            // Press Alt+Shift+D to open a new pane.
-            // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-            // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-            // To learn more about panes, visit https://aka.ms/terminal-panes
-            { "command": "closePane", "keys": "ctrl+shift+w" },
-            { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-            { "command": { "action": "splitPane", "split": "horizontal"}, "keys": "alt+shift+-" },
-            { "command": { "action": "splitPane", "split": "vertical"}, "keys": "alt+shift+plus" },
-            { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
-            { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" },
-            { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" },
-            { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" },
-            { "command": { "action": "resizePane", "direction": "down" }, "keys": "alt+shift+down" },
-            { "command": { "action": "resizePane", "direction": "left" }, "keys": "alt+shift+left" },
-            { "command": { "action": "resizePane", "direction": "right" }, "keys": "alt+shift+right" },
-            { "command": { "action": "resizePane", "direction": "up" }, "keys": "alt+shift+up" }
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "命令提示符",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
+            }
         ]
-    }
-    
+    },
+
+    // Add custom color schemes to this array.
+    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+    "schemes": [
+        {
+            "name": "BlulocoLight",
+            "cursorColor": "#000000",
+            "black": "#cbccd5",
+            "red": "#c90e42",
+            "green": "#21883a",
+            "yellow": "#d54d17",
+            "blue": "#1e44dd",
+            "purple": "#6d1bed",
+            "cyan": "#1f4d7a",
+            "white": "#000000",
+            "brightBlack": "#dedfe8",
+            "brightRed": "#fc4a6d",
+            "brightGreen": "#34b354",
+            "brightYellow": "#b89427",
+            "brightBlue": "#1085d9",
+            "brightPurple": "#c00db3",
+            "brightCyan": "#5b80ad",
+            "brightWhite": "#1d1d22",
+            "background": "#f7f7f7",
+            "foreground": "#2a2c33"
+        }
+    ],
+
+    // Add custom keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
+    "keybindings":
+    [
+        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+        // To learn more about selection, visit https://aka.ms/terminal-selection
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+
+        // Press Ctrl+Shift+F to open the search box
+        { "command": "find", "keys": "ctrl+shift+f" },
+
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        { "command": "closePane", "keys": "ctrl+shift+w" },
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        { "command": { "action": "splitPane", "split": "horizontal"}, "keys": "alt+shift+-" },
+        { "command": { "action": "splitPane", "split": "vertical"}, "keys": "alt+shift+plus" },
+        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
+        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" },
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" },
+        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" },
+        { "command": { "action": "resizePane", "direction": "down" }, "keys": "alt+shift+down" },
+        { "command": { "action": "resizePane", "direction": "left" }, "keys": "alt+shift+left" },
+        { "command": { "action": "resizePane", "direction": "right" }, "keys": "alt+shift+right" },
+        { "command": { "action": "resizePane", "direction": "up" }, "keys": "alt+shift+up" }
+    ]
+}
